@@ -1,60 +1,43 @@
-import React from 'react';
+import * as React from 'react';
+import {Component} from 'react';
+import {Image} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
-import {
-  Text,
-  Image,
-  StyleSheet,
-  Dimensions,
-  ImageBackground,
-  StatusBar,
-} from 'react-native';
+// Redux
+import {connect} from 'react-redux';
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    flex: 1,
-    paddingHorizontal: 20,
-  },
-  fileName: {
-    fontWeight: 'bold',
-    marginTop: 5,
-  },
-  instructions: {
-    color: '#DDD',
-    fontSize: 14,
-    marginTop: 20,
-    textAlign: 'center',
-  },
-  logo: {
-    height: Dimensions.get('window').height * 0.11,
-    marginVertical: Dimensions.get('window').height * 0.11,
-    width: Dimensions.get('window').height * 0.11 * (1950 / 662),
-  },
-  welcome: {
-    color: '#fff',
-    fontSize: 22,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
+//  Components
+import {colors} from '../../global';
+import {translate} from '../../locales';
+import {Splash, Welcome, Title, Info} from './styles';
 
-const Main = () => (
-  <ImageBackground
-    source={{
-      uri: 'https://s3-sa-east-1.amazonaws.com/rocketseat-cdn/background.png',
-    }}
-    style={styles.container}
-    resizeMode="cover">
-    <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
-    <Text style={styles.welcome}>Bem-vindo ao Template Avançado!</Text>
-    <Text style={styles.instructions}>
-      Essa é a tela principal da sua aplicação =)
-    </Text>
-    <Text style={styles.instructions}>Você pode editar a tela no arquivo:</Text>
-    <Text style={[styles.instructions, styles.fileName]}>
-      src/pages/Main/index.js
-    </Text>
-  </ImageBackground>
-);
+const spinner = require('../../assets/img/react.png');
 
-export default Main;
+class Main extends Component {
+  render() {
+    return (
+      <LinearGradient
+        colors={[colors.primary, colors.secondary]}
+        style={{flex: 1}}>
+        <Splash>
+          <Image
+            source={spinner}
+            style={{maxWidth: '50%', resizeMode: 'contain'}}
+          />
+          <Welcome>{translate(['initial', 'welcome'])}</Welcome>
+          <Title>{translate(['initial', 'title'])}</Title>
+          <Info>{translate(['initial', 'info'])}</Info>
+        </Splash>
+      </LinearGradient>
+    );
+  }
+}
+
+const mapStateToProps = (state: any) => ({});
+
+const mapStateToDispatch = {};
+
+export default connect(
+  mapStateToProps,
+  mapStateToDispatch,
+)(Main);

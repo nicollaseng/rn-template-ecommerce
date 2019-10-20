@@ -11,11 +11,13 @@ import {connect} from 'react-redux';
 import {Splash} from './styles';
 import {colors} from '../../global';
 
-const spinner = require('../../assets/img/react.png');
+const splash_logo = require('../../assets/img/react.png');
 
 class SplashScreen extends Component {
-  async componentDidMount() {
-    Actions.welcome({});
+  componentDidMount() {
+    setTimeout(() => {
+      Actions.replace('welcome');
+    }, 1500);
   }
 
   render() {
@@ -24,7 +26,10 @@ class SplashScreen extends Component {
         colors={[colors.primary, colors.secondary]}
         style={{flex: 1}}>
         <Splash>
-          <Image source={spinner} style={{width: 209, height: 70}} />
+          <Image
+            source={splash_logo}
+            style={{maxWidth: '50%', resizeMode: 'contain'}}
+          />
         </Splash>
       </LinearGradient>
     );

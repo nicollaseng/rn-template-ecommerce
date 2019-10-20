@@ -1,6 +1,8 @@
 const pt = {
   initial: {
-    title: 'Bem-vindo ao template de Nicollas Carvalho',
+    welcome: 'Seja bem-vindo!',
+    title: 'C03er Template',
+    info: 'Mais informações em: https://github.com/nicollasmatheus',
   },
   drawer: {
     logout: 'Sair',

@@ -1,6 +1,8 @@
 const en = {
   initial: {
-    title: "Welcome to Nicollas Carvalho Template's",
+    welcome: 'Welcome!',
+    title: 'C03er Template',
+    info: 'Further informations at: https://github.com/nicollasmatheus',
   },
   drawer: {
     logout: 'Logout',
