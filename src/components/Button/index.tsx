@@ -36,6 +36,11 @@ interface PropsTypes {
   testID?: string;
   paddingLeft?: number;
   paddingRight?: number;
+  width?: number;
+  padding?: number;
+  outline?: boolean;
+  color?: string;
+  borderRadius?: number;
 }
 
 const Button = (props: PropsTypes) => {
@@ -55,7 +60,10 @@ const Button = (props: PropsTypes) => {
       disabled={props.disabled}
       onPress={props.action}
       activeOpacity={1}
+      width={props.width}
+      outline={props.outline}
       center={props.center}
+      borderRadius={props.borderRadius}
       margin={props.margin !== undefined ? `${props.margin}px` : undefined}
       testID={props.testID}>
       {props.imgIcon !== undefined ? (
@@ -80,6 +88,8 @@ const Button = (props: PropsTypes) => {
         uppercase={props.uppercase}
         size={props.size}
         bold={props.bold}
+        padding={props.padding}
+        color={props.color}
         center={props.center}>
         {props.content}
       </BtnText>

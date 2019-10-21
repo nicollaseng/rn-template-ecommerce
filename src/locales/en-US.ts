@@ -7,6 +7,10 @@ const en = {
   drawer: {
     logout: 'Logout',
   },
+  subheader: {
+    message: 'Message',
+    follow: 'Follow',
+  },
 };
 
 export default en;

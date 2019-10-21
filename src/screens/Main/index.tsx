@@ -9,8 +9,9 @@ import Header from '../../components/Header';
 import SubHeader from '../../components/SubHeader';
 
 // Styled Components
-import {Container} from './styles';
+import {Container, Scroll} from './styles';
 import ProductList from '../../components/ProductList';
+import Tabs from '../../components/Tabs';
 
 const spinner = require('../../assets/img/react.png');
 
@@ -19,8 +20,11 @@ class Main extends Component {
     return (
       <Container>
         <Header />
-        <SubHeader />
-        <ProductList />
+        <Scroll>
+          <SubHeader />
+          <ProductList />
+        </Scroll>
+        <Tabs />
       </Container>
     );
   }

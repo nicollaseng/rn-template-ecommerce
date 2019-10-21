@@ -7,6 +7,10 @@ const pt = {
   drawer: {
     logout: 'Sair',
   },
+  subheader: {
+    message: 'Mensagem',
+    follow: 'Seguir',
+  },
 };
 
 export default pt;

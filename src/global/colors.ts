@@ -4,9 +4,10 @@ const colors = {
   danger: '#F95F62',
   white: '#ffffff',
   blue: '#009BBE',
+  lighter: '#eee',
 
   buttons: {
-    primary: '#00c2c1',
+    primary: '#FF9982',
     disabled: '#DEDEDE',
     success: '#77D353',
     warning: '#fc9d19',
@@ -26,6 +27,14 @@ const colors = {
 
   inputs: {
     primary: '#7f7f7f',
+  },
+
+  header: {
+    primary: '#FF9982',
+  },
+
+  icons: {
+    primary: '#FF9982',
   },
 };
 

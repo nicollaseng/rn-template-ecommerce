@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import Button from '../Button';
+
 // Styles
 import {
   Container,
@@ -11,6 +12,9 @@ import {
   Name,
   ButtonContainer,
 } from './styles';
+
+import {translate} from '../../locales';
+import {colors} from '../../global';
 
 const SubHeader = () => (
   <Container>
@@ -24,8 +28,24 @@ const SubHeader = () => (
       <Name>Nicollas Matheus</Name>
       <Info>Software Engineer @VUniverse</Info>
       <ButtonContainer>
-        <Button content="Mensagem" />
-        <Button content="Seguir" />
+        <Button
+          primary
+          center
+          bold
+          width={40}
+          borderRadius={20}
+          color={colors.white}
+          content={translate(['subheader', 'message'])}
+        />
+        <Button
+          center
+          bold
+          outline
+          color={colors.header.primary}
+          width={40}
+          borderRadius={20}
+          content={translate(['subheader', 'follow'])}
+        />
       </ButtonContainer>
     </Subcontainer>
   </Container>
