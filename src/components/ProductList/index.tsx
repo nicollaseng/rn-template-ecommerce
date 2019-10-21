@@ -12,7 +12,7 @@ export default class ProductList extends Component {
       {
         id: 1,
         image:
-          'https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=28010875',
+          'https://images.neimanmarcus.com/ca/1/product_assets/B/3/T/5/S/NMB3T5S_au.jpg',
         title: 'Acne Studios',
         description: 'Andrea nappa dusty pink',
         price: 'R$50,00',
@@ -28,7 +28,7 @@ export default class ProductList extends Component {
       {
         id: 3,
         image:
-          'https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=28010875',
+          'https://images.neimanmarcus.com/ca/1/product_assets/B/3/T/5/S/NMB3T5S_au.jpg',
         title: 'Acne Studios',
         description: 'Andrea nappa dusty pink',
         price: 'R$30,00',

@@ -1,6 +1,14 @@
 import React from 'react';
 
-import {Container, Image, Description, Title, Price} from './styles';
+import {
+  Container,
+  Image,
+  Description,
+  Title,
+  Price,
+  Footer,
+  IconVector as Icon,
+} from './styles';
 
 const Product = (props: any = {}) => {
   const {image, title, description, price} = props.product;
@@ -9,7 +17,10 @@ const Product = (props: any = {}) => {
       <Image source={{uri: image}} />
       <Title>{title}</Title>
       <Description>{description}</Description>
-      <Price>{price}</Price>
+      <Footer>
+        <Price>{price}</Price>
+        <Icon name="shopping-cart" size={17} />
+      </Footer>
     </Container>
   );
 };
